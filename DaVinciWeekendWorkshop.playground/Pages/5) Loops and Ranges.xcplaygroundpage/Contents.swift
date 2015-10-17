@@ -72,7 +72,7 @@ for ii in start...end {
     XCPCaptureValue("value", value: ii)
 
 //    After you see the timeline, uncomment this next line
-//    XCPCaptureValue("log", value: sin(Double(ii)))
+    XCPCaptureValue("sin", value: sin(Double(ii)))
 }
 
 /*:
@@ -150,20 +150,18 @@ print("\(value)! is \(factor)")
 > We have only used the `print(string)` function so far, but it can do more.  `print(String, terminator:"")` command is very similar, but it doesn't start a new line.  So `print(string)` prints a string to the console, then presses *return* (basically).  `print(string, terminator:"")` prints to the console, then DOES NOT press *return*.  Calling `print("")` (with and empty string) is just like pressing *return*.
 */
 
-/*  /** UNCOMMENT **/
+
 print("===============")
 
 var numberOfRows = 10
 
-for ii in numberOfrows...1 {
+for ii in 1...numberOfRows {
     var str = ""
-    for jj in 1..ii {
+    for jj in 1...ii {
         print("*", terminator:"")
     }
     print("")
 }
-
-*/  /** UNCOMMENT **/
 
 
 /*:
@@ -186,11 +184,17 @@ func isOdd(value:Int) -> Bool {
     return value % 2 == 1
 }
 
-// write loop here
+for ii in startingNumber...endingNumber {
+    if isOdd(ii) {
+        oddSum += ii
+    } else {
+        evenSum += ii;
+        
+    }
+}
 
-evenSum
-oddSum
-
+print("odd total: \(oddSum)", terminator:"")
+print("even total: \(evenSum)", terminator:"")
 
 /*:
 
