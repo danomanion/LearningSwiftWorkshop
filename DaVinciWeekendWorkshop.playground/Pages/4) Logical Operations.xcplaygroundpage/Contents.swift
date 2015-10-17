@@ -161,17 +161,16 @@ Your *coding style* should be clean and easy to read.  Pick good names, and make
 > Without changing the print statements, fix the slew of errors below.
 */
 
-/*  /** UNCOMMENT **/
 
 let currentTemp = 900
 let isRunning   = true
 var maxTemp     = 1200
 var minTemp     = 400
 
-if !isRunning {
+if isRunning {
     if (currentTemp < maxTemp) && (currentTemp > minTemp) {
         print("normal operating conditions")
-    } else if currentTemp !> minTemp {
+    } else if currentTemp < minTemp {
         print("running to cold.  remove water.")
     } else {
         print("runing too hot.  add water.")
@@ -179,9 +178,6 @@ if !isRunning {
 } else {
     print("Call Maintenance!")
 }
-
-*/  /** UNCOMMENT **/
-
 
 /*:
 ![Write](Write.png)
@@ -196,11 +192,28 @@ var hasSunscreen = false
 var hasShades    = false
 
 // solve like in the isFreezing / wearingScarf example above (in Look)
+func checkItemsForBeach(hasTowel:Bool, hasSunscreen:Bool, hasShades:Bool) {
+    if hasTowel && hasSunscreen && hasShades {
+        print("Go to the beach.")
+    } else {
+        var forgotenItems:String = ""
+        
+        if !hasTowel {
+            forgotenItems += "Towl "
+        }
+        
+        if !hasSunscreen {
+            forgotenItems += "Sunscreen "
+        }
+        
+        if !hasShades {
+            forgotenItems += "Shades "
+        }
+        print("You are missing: \(forgotenItems).")
+    }
+}
 
-
-
-
-
+checkItemsForBeach(true, hasSunscreen: true, hasShades: true)
 
 /*:
 Since we're talking about readability, notice the grouping of our variables and use of of whitespace (litterally spaces) to line things up.  That's fine (great even) Swift ignores extra whitespaces in code.
