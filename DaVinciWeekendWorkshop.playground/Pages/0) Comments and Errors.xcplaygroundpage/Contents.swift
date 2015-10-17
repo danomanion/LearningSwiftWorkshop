@@ -62,7 +62,7 @@ It can go on forever
   This is the ONE TIME you want to see errors in Xcode: when you're learning what they look like.
 */
 
-3 x 10
+// 3 x 10
 
 /*:
 
@@ -80,18 +80,15 @@ Before we continue, let's talk about errors - they break stuff.  You need to fix
 > 2. Change code to fix the errors and get it running
 > 3. Observe output - just because it runs, is it right?
 */
+/* Fix errors */
+(21.5 * 0.02) * 12
 
-/*  /** UNCOMMENT **/
-21.5.2 * 12
+1 + 1 + 1
 
-10 / 0
+(21.5 * 0.02) * 12
 
-1 + 1 + 1 +
-
-21.5.2 * 12
-
+let pi = 3.14
 pi * 10
-*/  /** UNCOMMENT **/
 
 /*:
 ![Write](Write.png)
@@ -101,13 +98,14 @@ pi * 10
 > 2. If you are 38 and 1/2 years old, how many days old are you?
 > 3. I have 7 pizzas with 8 slices each.  How many slices do each of my 5 friends get?
 */
+// 1.
+(60 * 24) * 7
 
+// 2.
+38.5 * 365.25
 
-
-
-
-
-
+// 3.
+(7 * 8) / 5.0 // adding the '.' converts the result into a floating point number. 
 
 /*:
 

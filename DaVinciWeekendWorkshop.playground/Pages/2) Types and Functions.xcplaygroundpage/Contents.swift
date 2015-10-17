@@ -174,31 +174,20 @@ print(result)
 > Fix the two sections below separately.
 */
 
-
-/*  /** UNCOMMENT 1st **/
-
 // these are all snippets that should be valid
-var aNumber:int = 1
+var aNumber:Int = 1
 
-var aBool:Bool = 0
+var aBool:Bool = false
 
-func addTwoFloat(floatOne, floatTwo) -> Float {
+func addTwoFloat(floatOne:Float, floatTwo:Float) -> Float {
     return floatOne + floatTwo
 }
 
-*/  /** UNCOMMENT 1st **/
-
-
-/*  /** UNCOMMENT 2nd **/
-
 func addTwoInt(intOne:Int, intTwo:Int) -> Int {
-    return floatOne + floatOne
+    return intOne + intTwo
 }
 
-addTwoInt(550, intTwo: 11.0)
-
-*/  /** UNCOMMENT 2nd **/
-
+addTwoInt(550, intTwo: Int(11.0))
 
 /*:
 ![Write](Write.png)
@@ -209,13 +198,26 @@ addTwoInt(550, intTwo: 11.0)
 > 3. Write a function that takes `firstName` and `lastName`, returns nothing, but prints a message using *both arguments*.
 */
 
+// 1.
+func weeksToMinutes(weeks:Int) -> Int {
+    return weeks * (7 * (60 * 24))
+}
 
+weeksToMinutes(4)
 
+// 2.
+func yearsToDays( years:Float ) -> Float {
+    return years * 365.25
+}
 
+yearsToDays(33)
 
+// 3.
+func nameCat(firstName:String, lastName:String) {
+    print("\(firstName) \(lastName)")
+}
 
-
-
+nameCat("Bob", lastName: "LeSparks")
 
 /*:
 [Next](@next) we learn about comparisons and modifying control flow
